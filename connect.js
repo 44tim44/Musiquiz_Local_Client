@@ -1,14 +1,18 @@
+socket.on('fromserver', message => {
+    console.log(message);
+});
+
+socket.on('NewQuestion', message => {
+    console.log(message);
+});
+
 function myFunction() {
-    var firstName = document.getElementById("firstname-input").value;
-    var lastName = document.getElementById("lastname-input").value;
+    var pinCode = document.getElementById("pin-input").value;
+    var username = document.getElementById("username-input").value;
 
-    socket.on('fromserver', message => {
-        console.log(message);
-    });
-
-    socket.emit('data', {
-        firstName: firstName,
-        lastName: lastName
+    socket.emit('Join', {
+        PIN: pinCode,
+        Username: username
     });
 }
 
