@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Musiquiz</title>
+    <link rel="stylesheet" type="text/css" href="client.css">
 </head>
 <body>
-    <button type="button" onclick="parent.quit()" id="leave-button">x</button>
+    <img id="login-mqlogo" src="Musiquiz.svg">
     <form method="post" id="send-container">
-        PIN-Code: <input type="text" name="pin" id="pin-input"><br>
-        Username: <input type="text" name="username" id="username-input"><br>
+        <div class="login-label">PIN-Code:</div>
+        <input type="text" name="pin" id="pin-input"><br>
+        <div class="login-label">Username: </div>
+        <input type="text" name="username" id="username-input"><br>
         <button type="button" onclick="parent.join()" id="join-button">Join</button>
+        <div id="login-error"></div>
     </form>
 </body>
 </html>

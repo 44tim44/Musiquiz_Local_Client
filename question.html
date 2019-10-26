@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Musiquiz</title>
+    <link rel="stylesheet" type="text/css" href="client.css">
 </head>
 <body>
     <button type="button" onclick="parent.quit()" id="leave-button">x</button>
     <div id="currQ">Question #</div>
-    <button type="button" onclick="parent.answer(1)" id="answer-button-1">1</button>
-    <button type="button" onclick="parent.answer(2)" id="answer-button-2">2</button>
-    <button type="button" onclick="parent.answer(3)" id="answer-button-3">3</button>
-    <button type="button" onclick="parent.answer(4)" id="answer-button-4">4</button>
+    <div id="answer-wrapper">
+        <button type="button" onclick="parent.answer(1)" class="answer-button" id="answer-button-1"><img class="img-answer" src="1Not_1.png"></button>
+        <button type="button" onclick="parent.answer(2)" class="answer-button" id="answer-button-2"><img class="img-answer" src="1Not_2.png"></button>
+        <button type="button" onclick="parent.answer(3)" class="answer-button" id="answer-button-3"><img class="img-answer" src="1Not_3.png"></button>
+        <button type="button" onclick="parent.answer(4)" class="answer-button" id="answer-button-4"><img class="img-answer" src="1Not_4.png"></button>
+    </div>
 </body>
 </html>

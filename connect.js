@@ -15,10 +15,12 @@ socket.on('JoinResponse', message => {
     if(message.flag == 0) {
         console.log(message.response);
         iframeDocument.getElementById("pin-input").value = "";
+        iframeDocument.getElementById("login-error").innerHTML = "Incorrect PIN";
     }
     else if(message.flag == 1) {
         console.log(message.response);
         iframeDocument.getElementById("username-input").value = "";
+        iframeDocument.getElementById("login-error").innerHTML = "Username already in use";
     }
     else if(message.flag == 2) {
         $('#bodyframe').attr('src','lobby.html');
@@ -62,6 +64,12 @@ socket.on('QuizEnd', message => {
     $('#bodyframe').attr('src','lobby.html');
 });
 
+socket.on('LobbyEnd', message => {
+    console.log(message);
+    currentQuestion = 0;
+    window.location.href = "main.html";
+});
+
 function join() {
     pinCode = iframeDocument.getElementById("pin-input").value;
     username = iframeDocument.getElementById("username-input").value;
@@ -77,6 +85,7 @@ function quit() {
         PIN: pinCode,
         Username: username
     });
+    window.location.href = "main.html";
 }
 
 
