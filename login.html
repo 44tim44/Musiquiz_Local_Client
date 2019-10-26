@@ -5,10 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" id="send-container">
-    PIN-Code: <input type="text" name="pin" id="pin-input"><br>
-    Username: <input type="text" name="username" id="username-input"><br>
-    <button type="button" onclick="parent.join()" id="join-button">Join</button>
-</form>
+    <button type="button" onclick="parent.quit()" id="leave-button">x</button>
+    <form method="post" id="send-container">
+        PIN-Code: <input type="text" name="pin" id="pin-input"><br>
+        Username: <input type="text" name="username" id="username-input"><br>
+        <button type="button" onclick="parent.join()" id="join-button">Join</button>
+    </form>
 </body>
 </html>
